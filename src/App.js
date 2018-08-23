@@ -5,10 +5,9 @@ import Layout from './components/Layout/Layout';
 class App extends Component {
   render() {
     return (
-      <div className='App'>
-        <Layout>
-          <p>Lorem ipsum dolor sit amet.</p>
-        </Layout>
+      <div className={styles.App}>
+        <Layout/>
+        <p>Lorem ipsum dolor sit amet.</p>
       </div>
     );
   }
