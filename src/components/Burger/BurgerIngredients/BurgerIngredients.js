@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 // to enable proptypes: npm install --save prop-types
 
 // convert to class (albeit, stateless) in order to use PropTypes
-// const burgerIngredient = (props) => {
-class BurgerIngredient extends Component {
+// const burgerIngredients = (props) => {
+class BurgerIngredients extends Component {
 
   render () {
 
@@ -35,12 +35,18 @@ class BurgerIngredient extends Component {
       case ('bacon'):
         ingredient = <div className={styles.Bacon}></div>;
         break;
+      default:
+        ingredient = null;
     }
-  }
 
-  BurgerIngredient.PropTypes = {
+    return ingredient;
+
+  }
+}
+
+  BurgerIngredients.propTypes = {
     type: PropTypes.string.isRequired
   };
 
 
-export default BurgerIngredient;
+export default BurgerIngredients;
